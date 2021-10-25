@@ -1,0 +1,11 @@
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\bin\Debug\TP_BdD.exe.config
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\bin\Debug\TP_BdD.exe
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\bin\Debug\TP_BdD.pdb
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\obj\Debug\TP_BdD.csproj.AssemblyReference.cache
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\obj\Debug\TP_BdD.Form1.resources
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\obj\Debug\TP_BdD.Properties.Resources.resources
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\obj\Debug\TP_BdD.csproj.GenerateResource.cache
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\obj\Debug\TP_BdD.csproj.CoreCompileInputs.cache
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\obj\Debug\TP_BdD.exe
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\obj\Debug\TP_BdD.pdb
+C:\Users\Ernesto Kirchuk\source\repos\TP_BdD\obj\Debug\TP_BdD.frmBuscador.resources
