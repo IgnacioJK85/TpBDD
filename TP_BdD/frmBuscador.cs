@@ -14,6 +14,7 @@ namespace TP_BdD
     public partial class frmBuscador : Form
     {
         OleDbConnection con = new OleDbConnection();
+        DataSet ds = new DataSet();
 
         public frmBuscador()
         {
@@ -26,10 +27,56 @@ namespace TP_BdD
             con.Open();
 
         }
+     
 
-        private void btn_Click(object sender, EventArgs e)
+        private void chckbxAño_CheckedChanged(object sender, EventArgs e)
         {
-             string sql = "SELECT * FROM Tabla1 WHERE Pelicula = '" + txtPelicula.Text + "' and Genero = '" + txtGenero.Text + "'";
+            
+
+        }
+
+        private void chckbxGenero_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (chckbxGenero.Checked)
+            {
+                string sql = "SELECT * FROM Pelicula WHERE Genero  = '" + txtBarraBuscador.Text + "'";
+
+                OleDbCommand cmd = new OleDbCommand(sql, con);
+
+                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+
+                da.Fill(ds, "Pelicula");
+
+                con.Close();
+
+                dataGDMostrador.DataSource = ds.Tables["Pelicula"];
+            }
+
+            if (chckbxAño.Checked)
+            {
+                string sql = "SELECT * FROM Pelicula WHERE Año = '" + txtBarraBuscador.Text + "'";
+
+                OleDbCommand cmd = new OleDbCommand(sql, con);
+
+                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+
+                da.Fill(ds, "Pelicula");
+
+                con.Close();
+
+                dataGDMostrador.DataSource = ds.Tables["Pelicula"];       
+            }       
+        }
+
+        private void lblMenu_Click(object sender, EventArgs e)
+        {
+            new Form1().Show();
+            this.Hide();
         }
     }
 }

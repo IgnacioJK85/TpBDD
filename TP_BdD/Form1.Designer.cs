@@ -140,7 +140,7 @@ namespace TP_BdD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 463);
+            this.ClientSize = new System.Drawing.Size(765, 516);
             this.Controls.Add(this.lblCambiarForm);
             this.Controls.Add(this.btnAñadirAlosCmbbx);
             this.Controls.Add(this.txtNomPelicula);

@@ -74,8 +74,9 @@ namespace TP_BdD
             }
             else
             {
-                string sql = "INSERT INTO Tabla1 VALUES ('" + txtNomPelicula.Text + "','" + cmbBxGeneroPelicula.SelectedItem + "', '" + cmbBxAñoPelicula.SelectedItem + "')";
+                string sql = "INSERT INTO Pelicula VALUES ('" + txtNomPelicula.Text + "','" + Convert.ToString(cmbBxGeneroPelicula.SelectedItem) + "', '" + Convert.ToString(cmbBxAñoPelicula.SelectedItem) + "');";
                 OleDbCommand cmd = new OleDbCommand(sql, con);
+                cmd.ExecuteNonQuery();
                 con.Close();
             }
         }
