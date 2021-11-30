@@ -14,6 +14,7 @@ namespace TP_BdD
     public partial class Form1 : Form
     {
         OleDbConnection con = new OleDbConnection();
+        DataSet ds = new DataSet();
 
         public Form1()
         {
@@ -22,7 +23,7 @@ namespace TP_BdD
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\db_TPBdD.accdb;";
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\dbTPBdD.accdb;";
             con.Open();
         }
 
@@ -74,8 +75,17 @@ namespace TP_BdD
             }
             else
             {
-                string sql = "INSERT INTO Pelicula VALUES ('" + txtNomPelicula.Text + "','" + Convert.ToString(cmbBxGeneroPelicula.SelectedItem) + "', '" + Convert.ToString(cmbBxAñoPelicula.SelectedItem) + "');";
-                OleDbCommand cmd = new OleDbCommand(sql, con);
+                string sql1 = "SELECT Id FROM tblUsuarios WHERE NomUsario = '" + frmLogin.nomUser + "'";
+                OleDbCommand cmd1 = new OleDbCommand(sql1, con);
+                cmd1.ExecuteNonQuery();
+                OleDbDataAdapter da = new OleDbDataAdapter(cmd1);
+                da.Fill(ds, "tblPeliculas");
+
+                lblPrueba.Text = ds.Tables["tblPeliculas"].Rows[0]["Id"].ToString();
+      
+
+                string sql2 = "INSERT INTO tblPeliculas (NomPelicula, GeneroPelicula, AñoPelicula, IDUsuario) VALUES ('" + txtNomPelicula.Text + "','" + Convert.ToString(cmbBxGeneroPelicula.SelectedItem) + "', '" + Convert.ToString(cmbBxAñoPelicula.SelectedItem) + "', " + 1 + ");";
+                OleDbCommand cmd = new OleDbCommand(sql2, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
             }

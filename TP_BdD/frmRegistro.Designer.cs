@@ -28,76 +28,113 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtNomUsuario = new System.Windows.Forms.TextBox();
+            this.txtConfContraseña = new System.Windows.Forms.TextBox();
+            this.btnRegistrarse = new System.Windows.Forms.Button();
             this.chckBxMC = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNomUsuario = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.lblConfContraseña = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnRegistrar
+            // txtContraseña
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(348, 219);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrar.TabIndex = 0;
-            this.btnRegistrar.Text = "Registrarse";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.txtContraseña.Location = new System.Drawing.Point(344, 178);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(100, 20);
+            this.txtContraseña.TabIndex = 0;
             // 
-            // textBox1
+            // txtNomUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(335, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtNomUsuario.Location = new System.Drawing.Point(344, 119);
+            this.txtNomUsuario.Name = "txtNomUsuario";
+            this.txtNomUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtNomUsuario.TabIndex = 1;
             // 
-            // textBox2
+            // txtConfContraseña
             // 
-            this.textBox2.Location = new System.Drawing.Point(335, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtConfContraseña.Location = new System.Drawing.Point(344, 238);
+            this.txtConfContraseña.Name = "txtConfContraseña";
+            this.txtConfContraseña.Size = new System.Drawing.Size(100, 20);
+            this.txtConfContraseña.TabIndex = 2;
             // 
-            // textBox3
+            // btnRegistrarse
             // 
-            this.textBox3.Location = new System.Drawing.Point(335, 131);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.btnRegistrarse.Location = new System.Drawing.Point(354, 328);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrarse.TabIndex = 3;
+            this.btnRegistrarse.Text = "Registrarse";
+            this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // chckBxMC
             // 
             this.chckBxMC.AutoSize = true;
-            this.chckBxMC.Location = new System.Drawing.Point(520, 224);
+            this.chckBxMC.Location = new System.Drawing.Point(465, 278);
             this.chckBxMC.Name = "chckBxMC";
-            this.chckBxMC.Size = new System.Drawing.Size(117, 17);
+            this.chckBxMC.Size = new System.Drawing.Size(118, 17);
             this.chckBxMC.TabIndex = 4;
-            this.chckBxMC.Text = "Mostrar contraseña";
+            this.chckBxMC.Text = "Mostrar Contraseña";
             this.chckBxMC.UseVisualStyleBackColor = true;
+            this.chckBxMC.CheckedChanged += new System.EventHandler(this.chckBxMC_CheckedChanged);
             // 
-            // label1
+            // lblNomUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(365, 266);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.lblNomUsuario.AutoSize = true;
+            this.lblNomUsuario.Location = new System.Drawing.Point(228, 122);
+            this.lblNomUsuario.Name = "lblNomUsuario";
+            this.lblNomUsuario.Size = new System.Drawing.Size(99, 13);
+            this.lblNomUsuario.TabIndex = 5;
+            this.lblNomUsuario.Text = "Nombre de usuario:";
+            // 
+            // lblContraseña
+            // 
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Location = new System.Drawing.Point(228, 181);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(64, 13);
+            this.lblContraseña.TabIndex = 6;
+            this.lblContraseña.Text = "Contraseña:";
+            // 
+            // lblConfContraseña
+            // 
+            this.lblConfContraseña.AutoSize = true;
+            this.lblConfContraseña.Location = new System.Drawing.Point(228, 241);
+            this.lblConfContraseña.Name = "lblConfContraseña";
+            this.lblConfContraseña.Size = new System.Drawing.Size(110, 13);
+            this.lblConfContraseña.TabIndex = 7;
+            this.lblConfContraseña.Text = "Confirmar contraseña:";
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Location = new System.Drawing.Point(351, 389);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(83, 13);
+            this.lblLogin.TabIndex = 8;
+            this.lblLogin.Text = "Cambiar a Login";
+            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.lblConfContraseña);
+            this.Controls.Add(this.lblContraseña);
+            this.Controls.Add(this.lblNomUsuario);
             this.Controls.Add(this.chckBxMC);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.btnRegistrarse);
+            this.Controls.Add(this.txtConfContraseña);
+            this.Controls.Add(this.txtNomUsuario);
+            this.Controls.Add(this.txtContraseña);
             this.Name = "frmRegistro";
             this.Text = "frmRegistro";
+            this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,11 +142,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtNomUsuario;
+        private System.Windows.Forms.TextBox txtConfContraseña;
+        private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.CheckBox chckBxMC;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNomUsuario;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.Label lblConfContraseña;
+        private System.Windows.Forms.Label lblLogin;
     }
 }

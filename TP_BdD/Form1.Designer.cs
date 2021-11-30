@@ -40,6 +40,7 @@ namespace TP_BdD
             this.txtNomPelicula = new System.Windows.Forms.TextBox();
             this.btnAñadirAlosCmbbx = new System.Windows.Forms.Button();
             this.lblCambiarForm = new System.Windows.Forms.Label();
+            this.lblPrueba = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAgregarInfoFinal
@@ -136,11 +137,21 @@ namespace TP_BdD
             this.lblCambiarForm.Text = "Cambiar al buscador:";
             this.lblCambiarForm.Click += new System.EventHandler(this.lblCambiarForm_Click);
             // 
+            // lblPrueba
+            // 
+            this.lblPrueba.AutoSize = true;
+            this.lblPrueba.Location = new System.Drawing.Point(579, 88);
+            this.lblPrueba.Name = "lblPrueba";
+            this.lblPrueba.Size = new System.Drawing.Size(35, 13);
+            this.lblPrueba.TabIndex = 12;
+            this.lblPrueba.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 516);
+            this.Controls.Add(this.lblPrueba);
             this.Controls.Add(this.lblCambiarForm);
             this.Controls.Add(this.btnAñadirAlosCmbbx);
             this.Controls.Add(this.txtNomPelicula);
@@ -173,6 +184,7 @@ namespace TP_BdD
         private System.Windows.Forms.TextBox txtNomPelicula;
         private System.Windows.Forms.Button btnAñadirAlosCmbbx;
         private System.Windows.Forms.Label lblCambiarForm;
+        private System.Windows.Forms.Label lblPrueba;
     }
 }
 

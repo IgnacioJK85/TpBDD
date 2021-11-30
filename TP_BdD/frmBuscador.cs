@@ -23,7 +23,7 @@ namespace TP_BdD
 
         private void frmBuscador_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\db_TPBdD.accdb;";
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\dbTPBdD.accdb;";
             con.Open();
 
         }
@@ -32,7 +32,6 @@ namespace TP_BdD
         private void chckbxAño_CheckedChanged(object sender, EventArgs e)
         {
             
-
         }
 
         private void chckbxGenero_CheckedChanged(object sender, EventArgs e)
@@ -44,32 +43,32 @@ namespace TP_BdD
         {
             if (chckbxGenero.Checked)
             {
-                string sql = "SELECT * FROM Pelicula WHERE Genero  = '" + txtBarraBuscador.Text + "'";
+                string sql = "SELECT * FROM tblPeliculas WHERE GeneroPelicula  = '" + txtBarraBuscador.Text + "'";
 
                 OleDbCommand cmd = new OleDbCommand(sql, con);
 
                 OleDbDataAdapter da = new OleDbDataAdapter(cmd);
 
-                da.Fill(ds, "Pelicula");
+                da.Fill(ds, "tblPeliculas");
 
                 con.Close();
 
-                dataGDMostrador.DataSource = ds.Tables["Pelicula"];
+                dataGDMostrador.DataSource = ds.Tables["tblPeliculas"];
             }
 
             if (chckbxAño.Checked)
             {
-                string sql = "SELECT * FROM Pelicula WHERE Año = '" + txtBarraBuscador.Text + "'";
+                string sql = "SELECT * FROM tblPeliculas WHERE AñoPelicula = '" + txtBarraBuscador.Text + "'";
 
                 OleDbCommand cmd = new OleDbCommand(sql, con);
 
                 OleDbDataAdapter da = new OleDbDataAdapter(cmd);
 
-                da.Fill(ds, "Pelicula");
+                da.Fill(ds, "tblPeliculas");
 
                 con.Close();
 
-                dataGDMostrador.DataSource = ds.Tables["Pelicula"];       
+                dataGDMostrador.DataSource = ds.Tables["tblPeliculas"];       
             }       
         }
 
