@@ -23,17 +23,16 @@ namespace TP_Bases_de_Datos
 
         private void frmAgregarPeliculas_Load(object sender, EventArgs e)
         {
-            lblNomUsuario.Text = frmLogin.nomUser;
-            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\db_TPBasesDeDatos.accdb;";
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\dbTPBdD.accdb;";
             con.Open();
         }
 
-        private void btnAñadirCmbBx_Click(object sender, EventArgs e)
+        private void btnAgregarALosCmb_Click(object sender, EventArgs e)
         {
             bool GeneroExistente = false;
             bool AñoExistente = false;
 
-            foreach (string elem in cmbBxGeneroPelicula.Items)
+            foreach (string elem in cmbGeneroPelicula.Items)
             {
                 if (elem == txtGeneroPelicula.Text)
                 {
@@ -47,10 +46,10 @@ namespace TP_Bases_de_Datos
             }
             else
             {
-                cmbBxGeneroPelicula.Items.Add(txtGeneroPelicula.Text);
+                cmbGeneroPelicula.Items.Add(txtGeneroPelicula.Text);
             }
 
-            foreach (string elem in cmbBxAñoPelicula.Items)
+            foreach (string elem in cmbAñoPelicula.Items)
             {
                 if (elem == txtAñoPelicula.Text)
                 {
@@ -64,30 +63,33 @@ namespace TP_Bases_de_Datos
             }
             else
             {
-                cmbBxAñoPelicula.Items.Add(txtAñoPelicula.Text);
+                cmbAñoPelicula.Items.Add(txtAñoPelicula.Text);
             }
         }
 
-        private void btnAñadirPeliculas_Click(object sender, EventArgs e)
+        private void btnAgregarPelicula_Click(object sender, EventArgs e)
         {
 
-            if (cmbBxAñoPelicula.SelectedIndex == -1 || cmbBxGeneroPelicula.SelectedIndex == -1)
+            if (cmbAñoPelicula.SelectedIndex == -1 || cmbGeneroPelicula.SelectedIndex == -1)
             {
                 MessageBox.Show("Selecciona año y/o genero de pelicula");
             }
             else
             {
-                string sql = "INSERT INTO tblPeliculas VALUES ('" + txtNomPelicula.Text + "','" + Convert.ToString(cmbBxGeneroPelicula.SelectedItem) + "', '" + Convert.ToString(cmbBxAñoPelicula.SelectedItem) + "', '" + 8 + "');";
-                OleDbCommand cmd = new OleDbCommand(sql, con);
+                string sql1 = "SELECT Id FROM tblUsuarios WHERE NomUsario = '" + frmLogin.nomUser + "'";
+                OleDbCommand cmd1 = new OleDbCommand(sql1, con);
+                cmd1.ExecuteNonQuery();
+                OleDbDataAdapter da = new OleDbDataAdapter(cmd1);
+                da.Fill(ds, "tblPeliculas");
+
+                lblPrueba.Text = ds.Tables["tblPeliculas"].Rows[0]["Id"].ToString();
+
+
+                string sql2 = "INSERT INTO tblPeliculas (NomPelicula, GeneroPelicula, AñoPelicula, IDUsuario) VALUES ('" + txtNomPelicula.Text + "','" + Convert.ToString(cmbBxGeneroPelicula.SelectedItem) + "', '" + Convert.ToString(cmbBxAñoPelicula.SelectedItem) + "', " + 1 + ");";
+                OleDbCommand cmd = new OleDbCommand(sql2, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-        }
-
-        private void lblBuscador_Click(object sender, EventArgs e)
-        {
-            new frmBuscador().Show();
-            this.Hide();
         }
     }
 }

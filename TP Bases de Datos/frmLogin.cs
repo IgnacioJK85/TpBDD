@@ -13,8 +13,7 @@ namespace TP_Bases_de_Datos
 {
     public partial class frmLogin : Form
     {
-        public static string nomUser = "";
-
+        public static string nomUser;
         OleDbConnection con = new OleDbConnection();
         OleDbCommand cmd = new OleDbCommand();
 
@@ -25,28 +24,61 @@ namespace TP_Bases_de_Datos
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\db_TPBasesDeDatos.accdb;";
+            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.\dbTPBdD.accdb;";
             con.Open();
         }
 
-        private void btnIniciarSesión_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM tblUsuarios WHERE Usuario = '" + txtNomUsuario.Text + "' and Contraseña = '" + txtContraseña.Text + "'";
+            string sql = "SELECT * FROM tblUsuarios WHERE NomUsuario= '" + txtNomUsuario.Text + "' AND Contraseña = '" + txtContraseña.Text + "'";
             cmd = new OleDbCommand(sql, con);
+            cmd.ExecuteNonQuery();
             OleDbDataReader dr = cmd.ExecuteReader();
-            
-            if (dr.Read() == true)
+
+
+            try
             {
-                new frmAgregarPeliculas().Show();
-                this.Hide();
-                nomUser = txtNomUsuario.Text;
+                if (dr.Read() == true)
+                {
+                    nomUser = txtNomUsuario.Text;
+                    new Form1().Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Campo de usuario o contraseña inválido, Intente nuevamente", "Login fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtNomUsuario.Text = "";
+                    txtContraseña.Text = "";
+                    txtNomUsuario.Focus();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Este nombre de usuario no existe");
+            }
+            finally
+            {
+                con.Close();
+                dr.Close();
             }
         }
 
-        private void lblRegistrarse_Click(object sender, EventArgs e)
+        private void lblRegister_Click(object sender, EventArgs e)
         {
             new Form1().Show();
             this.Hide();
+        }
+
+        private void chckBxMC_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBxMC.Checked)
+            {
+                txtContraseña.PasswordChar = '\0';
+            }
+            else
+            {
+                txtContraseña.PasswordChar = '•';
+            }
         }
     }
 }
