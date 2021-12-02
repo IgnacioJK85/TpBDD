@@ -42,22 +42,33 @@ namespace TP_Bases_de_Datos
                     DataTable dt2 = new DataTable();
                     da2.Fill(dt2);
                     dataGridView1.DataSource = dt2;
+                    dataGridView1.Columns[0].HeaderText = "Pélicula";
+                    dataGridView1.Columns[1].HeaderText = "Género";
+                    dataGridView1.Columns[2].HeaderText = "Año";
+                    dataGridView1.Columns[1].DefaultCellStyle.BackColor = Color.White;
+                    dataGridView1.Columns[2].DefaultCellStyle.BackColor = Color.Green;
+                    con.Close();
                 }
                 else if (rbGeneroPelicula.Checked)
                 {
-                    string sql1 = "SELECT NomPelicula, AñoPelicula, GeneroPelicula FROM tblPeliculas WHERE GeneroPelicula = '" + txtSearchBar.Text + "'";
+                    string sql1 = "SELECT NomPelicula, GeneroPelicula, AñoPelicula FROM tblPeliculas WHERE GeneroPelicula = '" + txtSearchBar.Text + "'";
                     OleDbCommand cmd1 = new OleDbCommand(sql1, con);
                     OleDbDataAdapter da1 = new OleDbDataAdapter(cmd1);
                     DataTable dt1 = new DataTable();
                     da1.Fill(dt1);
-                    dataGridView1.DataSource = dt1;                   
+                    dataGridView1.DataSource = dt1;
+                    dataGridView1.Columns[0].HeaderText = "Pélicula";
+                    dataGridView1.Columns[1].HeaderText = "Género";
+                    dataGridView1.Columns[2].HeaderText = "Año";
+                    dataGridView1.Columns[1].DefaultCellStyle.BackColor = Color.Green;
+                    dataGridView1.Columns[2].DefaultCellStyle.BackColor = Color.White;
+                    con.Close();
                 }
             }
         }
 
         private void lblVolverMenú_Click(object sender, EventArgs e)
         {
-            con.Close();
             new frmMenu().Show();
             this.Hide();
         }

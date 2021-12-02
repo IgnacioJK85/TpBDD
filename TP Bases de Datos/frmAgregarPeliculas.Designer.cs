@@ -47,25 +47,28 @@ namespace TP_Bases_de_Datos
             // 
             // cmbAñoPelicula
             // 
+            this.cmbAñoPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAñoPelicula.FormattingEnabled = true;
             this.cmbAñoPelicula.Location = new System.Drawing.Point(571, 143);
             this.cmbAñoPelicula.Name = "cmbAñoPelicula";
-            this.cmbAñoPelicula.Size = new System.Drawing.Size(121, 21);
+            this.cmbAñoPelicula.Size = new System.Drawing.Size(121, 28);
             this.cmbAñoPelicula.TabIndex = 0;
             // 
             // cmbGeneroPelicula
             // 
+            this.cmbGeneroPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGeneroPelicula.FormattingEnabled = true;
             this.cmbGeneroPelicula.Location = new System.Drawing.Point(571, 192);
             this.cmbGeneroPelicula.Name = "cmbGeneroPelicula";
-            this.cmbGeneroPelicula.Size = new System.Drawing.Size(121, 21);
+            this.cmbGeneroPelicula.Size = new System.Drawing.Size(121, 28);
             this.cmbGeneroPelicula.TabIndex = 1;
             // 
             // txtNomPelicula
             // 
+            this.txtNomPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomPelicula.Location = new System.Drawing.Point(571, 94);
             this.txtNomPelicula.Name = "txtNomPelicula";
-            this.txtNomPelicula.Size = new System.Drawing.Size(121, 20);
+            this.txtNomPelicula.Size = new System.Drawing.Size(121, 26);
             this.txtNomPelicula.TabIndex = 2;
             // 
             // btnAgregarPelicula
@@ -128,16 +131,18 @@ namespace TP_Bases_de_Datos
             // 
             // txtAñoPelicula
             // 
+            this.txtAñoPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAñoPelicula.Location = new System.Drawing.Point(223, 143);
             this.txtAñoPelicula.Name = "txtAñoPelicula";
-            this.txtAñoPelicula.Size = new System.Drawing.Size(100, 20);
+            this.txtAñoPelicula.Size = new System.Drawing.Size(100, 26);
             this.txtAñoPelicula.TabIndex = 8;
             // 
             // txtGeneroPelicula
             // 
+            this.txtGeneroPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGeneroPelicula.Location = new System.Drawing.Point(223, 190);
             this.txtGeneroPelicula.Name = "txtGeneroPelicula";
-            this.txtGeneroPelicula.Size = new System.Drawing.Size(100, 20);
+            this.txtGeneroPelicula.Size = new System.Drawing.Size(100, 26);
             this.txtGeneroPelicula.TabIndex = 9;
             // 
             // label1
@@ -163,7 +168,7 @@ namespace TP_Bases_de_Datos
             // lblVolverMenú
             // 
             this.lblVolverMenú.AutoSize = true;
-            this.lblVolverMenú.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVolverMenú.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVolverMenú.Location = new System.Drawing.Point(12, 9);
             this.lblVolverMenú.Name = "lblVolverMenú";
             this.lblVolverMenú.Size = new System.Drawing.Size(113, 20);
@@ -202,7 +207,7 @@ namespace TP_Bases_de_Datos
             this.Controls.Add(this.cmbGeneroPelicula);
             this.Controls.Add(this.cmbAñoPelicula);
             this.Name = "frmAgregarPeliculas";
-            this.Text = "frmAgregarPeliculas";
+            this.Text = "Añadidor De Películas";
             this.Load += new System.EventHandler(this.frmAgregarPeliculas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

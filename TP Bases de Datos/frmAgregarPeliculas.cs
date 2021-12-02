@@ -93,7 +93,7 @@ namespace TP_Bases_de_Datos
                     lblID.Text = Convert.ToString(dr.GetInt32(0));
                 }
 
-                string sql2 = "INSERT INTO tblPeliculas (NomPelicula, GeneroPelicula, AñoPelicula, IDUsuario) VALUES ('" + txtNomPelicula.Text + "','" + Convert.ToString(cmbGeneroPelicula.SelectedItem) + "', '" + Convert.ToString(cmbAñoPelicula.SelectedItem) + "', " + Convert.ToInt32(lblID.Text) + ");";
+                string sql2 = "INSERT INTO tblPeliculas (NomPelicula, AñoPelicula, GeneroPelicula , IDUsuario) VALUES ('" + txtNomPelicula.Text + "','" + Convert.ToString(cmbGeneroPelicula.SelectedItem) + "', '" + Convert.ToString(cmbAñoPelicula.SelectedItem) + "', " + Convert.ToInt32(lblID.Text) + ");";
                 OleDbCommand cmd2 = new OleDbCommand(sql2, con);
                 cmd2.ExecuteNonQuery();
             }

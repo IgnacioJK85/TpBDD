@@ -43,7 +43,7 @@ namespace TP_Bases_de_Datos
             this.lblRegister.AutoSize = true;
             this.lblRegister.BackColor = System.Drawing.Color.Yellow;
             this.lblRegister.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegister.Location = new System.Drawing.Point(256, 328);
+            this.lblRegister.Location = new System.Drawing.Point(256, 320);
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(149, 20);
             this.lblRegister.TabIndex = 18;
@@ -78,9 +78,9 @@ namespace TP_Bases_de_Datos
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnLogin.Location = new System.Drawing.Point(278, 229);
+            this.btnLogin.Location = new System.Drawing.Point(260, 229);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(127, 72);
+            this.btnLogin.Size = new System.Drawing.Size(145, 69);
             this.btnLogin.TabIndex = 15;
             this.btnLogin.Text = "Iniciar sesión";
             this.btnLogin.UseVisualStyleBackColor = false;

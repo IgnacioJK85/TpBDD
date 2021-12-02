@@ -55,7 +55,7 @@ namespace TP_Bases_de_Datos
             this.lblNomUsuario.AutoSize = true;
             this.lblNomUsuario.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lblNomUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomUsuario.Location = new System.Drawing.Point(65, 70);
+            this.lblNomUsuario.Location = new System.Drawing.Point(76, 96);
             this.lblNomUsuario.Name = "lblNomUsuario";
             this.lblNomUsuario.Size = new System.Drawing.Size(87, 25);
             this.lblNomUsuario.TabIndex = 2;
@@ -105,7 +105,7 @@ namespace TP_Bases_de_Datos
             this.lblDescripcion.BackColor = System.Drawing.Color.Transparent;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.Azure;
-            this.lblDescripcion.Location = new System.Drawing.Point(354, 249);
+            this.lblDescripcion.Location = new System.Drawing.Point(373, 251);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(525, 20);
             this.lblDescripcion.TabIndex = 6;
