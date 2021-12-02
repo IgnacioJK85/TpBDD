@@ -30,37 +30,27 @@ namespace TP_Bases_de_Datos
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM tblUsuarios WHERE NomUsuario= '" + txtNomUsuario.Text + "' AND Contraseña = '" + txtContraseña.Text + "'";
+            string sql = "SELECT * FROM tblUsuarios WHERE Usuario = '" + txtNomUsuario.Text + "' AND Contraseña = '" + txtContraseña.Text + "'";
             cmd = new OleDbCommand(sql, con);
             cmd.ExecuteNonQuery();
             OleDbDataReader dr = cmd.ExecuteReader();
 
-
-            try
+            if (dr.Read() == true)
             {
-                if (dr.Read() == true)
-                {
-                    nomUser = txtNomUsuario.Text;
-                    new Form1().Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Campo de usuario o contraseña inválido, Intente nuevamente", "Login fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtNomUsuario.Text = "";
-                    txtContraseña.Text = "";
-                    txtNomUsuario.Focus();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Este nombre de usuario no existe");
-            }
-            finally
-            {
+                nomUser = txtNomUsuario.Text;
                 con.Close();
                 dr.Close();
+                new frmMenu().Show();
+                this.Hide();
             }
+            else
+            {
+                MessageBox.Show("Contraseña o Usuario Incorrecto, intente nuevamente", "Error en Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNomUsuario.Text = "";
+                txtContraseña.Text = "";
+                txtNomUsuario.Focus();
+            } 
+            
         }
 
         private void lblRegister_Click(object sender, EventArgs e)

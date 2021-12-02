@@ -14,7 +14,7 @@ namespace TP_Bases_de_Datos
     public partial class frmAgregarPeliculas : Form
     {
         OleDbConnection con = new OleDbConnection();
-        OleDbCommand cmd = new OleDbCommand();
+        DataSet ds = new DataSet();
 
         public frmAgregarPeliculas()
         {
@@ -44,6 +44,10 @@ namespace TP_Bases_de_Datos
             {
                 MessageBox.Show("Este género ya se encuentra en el listado de géneros");
             }
+            else if (txtGeneroPelicula.Text == "")
+            {
+
+            }
             else
             {
                 cmbGeneroPelicula.Items.Add(txtGeneroPelicula.Text);
@@ -61,6 +65,10 @@ namespace TP_Bases_de_Datos
             {
                 MessageBox.Show("Este año ya se encuentra en el listado de años");
             }
+            else if (txtAñoPelicula.Text == "")
+            {
+
+            }
             else
             {
                 cmbAñoPelicula.Items.Add(txtAñoPelicula.Text);
@@ -76,20 +84,26 @@ namespace TP_Bases_de_Datos
             }
             else
             {
-                string sql1 = "SELECT Id FROM tblUsuarios WHERE NomUsario = '" + frmLogin.nomUser + "'";
+                string sql1 = "SELECT Id FROM tblUsuarios WHERE Usuario = '" + frmLogin.nomUser + "'";
                 OleDbCommand cmd1 = new OleDbCommand(sql1, con);
-                cmd1.ExecuteNonQuery();
-                OleDbDataAdapter da = new OleDbDataAdapter(cmd1);
-                da.Fill(ds, "tblPeliculas");
+                OleDbDataReader dr = cmd1.ExecuteReader();
 
-                lblPrueba.Text = ds.Tables["tblPeliculas"].Rows[0]["Id"].ToString();
+                while (dr.Read())
+                {
+                    lblID.Text = Convert.ToString(dr.GetInt32(0));
+                }
 
-
-                string sql2 = "INSERT INTO tblPeliculas (NomPelicula, GeneroPelicula, AñoPelicula, IDUsuario) VALUES ('" + txtNomPelicula.Text + "','" + Convert.ToString(cmbBxGeneroPelicula.SelectedItem) + "', '" + Convert.ToString(cmbBxAñoPelicula.SelectedItem) + "', " + 1 + ");";
-                OleDbCommand cmd = new OleDbCommand(sql2, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                string sql2 = "INSERT INTO tblPeliculas (NomPelicula, GeneroPelicula, AñoPelicula, IDUsuario) VALUES ('" + txtNomPelicula.Text + "','" + Convert.ToString(cmbGeneroPelicula.SelectedItem) + "', '" + Convert.ToString(cmbAñoPelicula.SelectedItem) + "', " + Convert.ToInt32(lblID.Text) + ");";
+                OleDbCommand cmd2 = new OleDbCommand(sql2, con);
+                cmd2.ExecuteNonQuery();
             }
+        }
+
+        private void lblVolverMenú_Click(object sender, EventArgs e)
+        {
+            con.Close();
+            new frmMenu().Show();
+            this.Hide();
         }
     }
 }

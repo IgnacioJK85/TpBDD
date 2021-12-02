@@ -1,4 +1,5 @@
-﻿namespace TP_Bases_de_Datos
+﻿
+namespace TP_Bases_de_Datos
 {
     partial class frmBuscador
     {
@@ -28,84 +29,113 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtBarraBuscador = new System.Windows.Forms.TextBox();
+            this.rbAñoPelicula = new System.Windows.Forms.RadioButton();
+            this.rbGeneroPelicula = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblVolverMenú = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGVMostrador = new System.Windows.Forms.DataGridView();
-            this.chckBxFiltrarGenero = new System.Windows.Forms.CheckBox();
-            this.chckBxFiltrarAño = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVMostrador)).BeginInit();
+            this.txtSearchBar = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtBarraBuscador
+            // rbAñoPelicula
             // 
-            this.txtBarraBuscador.Location = new System.Drawing.Point(160, 46);
-            this.txtBarraBuscador.Name = "txtBarraBuscador";
-            this.txtBarraBuscador.Size = new System.Drawing.Size(310, 20);
-            this.txtBarraBuscador.TabIndex = 0;
+            this.rbAñoPelicula.AutoSize = true;
+            this.rbAñoPelicula.Location = new System.Drawing.Point(34, 39);
+            this.rbAñoPelicula.Name = "rbAñoPelicula";
+            this.rbAñoPelicula.Size = new System.Drawing.Size(44, 17);
+            this.rbAñoPelicula.TabIndex = 1;
+            this.rbAñoPelicula.TabStop = true;
+            this.rbAñoPelicula.Text = "Año";
+            this.rbAñoPelicula.UseVisualStyleBackColor = true;
+            // 
+            // rbGeneroPelicula
+            // 
+            this.rbGeneroPelicula.AutoSize = true;
+            this.rbGeneroPelicula.Location = new System.Drawing.Point(171, 39);
+            this.rbGeneroPelicula.Name = "rbGeneroPelicula";
+            this.rbGeneroPelicula.Size = new System.Drawing.Size(60, 17);
+            this.rbGeneroPelicula.TabIndex = 2;
+            this.rbGeneroPelicula.TabStop = true;
+            this.rbGeneroPelicula.Text = "Género";
+            this.rbGeneroPelicula.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbAñoPelicula);
+            this.groupBox1.Controls.Add(this.rbGeneroPelicula);
+            this.groupBox1.Location = new System.Drawing.Point(241, 76);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(253, 98);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtrar por...";
+            // 
+            // lblVolverMenú
+            // 
+            this.lblVolverMenú.AutoSize = true;
+            this.lblVolverMenú.Location = new System.Drawing.Point(12, 9);
+            this.lblVolverMenú.Name = "lblVolverMenú";
+            this.lblVolverMenú.Size = new System.Drawing.Size(78, 13);
+            this.lblVolverMenú.TabIndex = 6;
+            this.lblVolverMenú.Text = "Volver al Menú";
+            this.lblVolverMenú.Click += new System.EventHandler(this.lblVolverMenú_Click);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(524, 46);
+            this.btnBuscar.Location = new System.Drawing.Point(594, 33);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Size = new System.Drawing.Size(96, 31);
+            this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dataGVMostrador
+            // txtSearchBar
             // 
-            this.dataGVMostrador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVMostrador.Location = new System.Drawing.Point(268, 188);
-            this.dataGVMostrador.Name = "dataGVMostrador";
-            this.dataGVMostrador.Size = new System.Drawing.Size(240, 150);
-            this.dataGVMostrador.TabIndex = 2;
+            this.txtSearchBar.Location = new System.Drawing.Point(196, 39);
+            this.txtSearchBar.Name = "txtSearchBar";
+            this.txtSearchBar.Size = new System.Drawing.Size(347, 20);
+            this.txtSearchBar.TabIndex = 9;
             // 
-            // chckBxFiltrarGenero
+            // dataGridView1
             // 
-            this.chckBxFiltrarGenero.AutoSize = true;
-            this.chckBxFiltrarGenero.Location = new System.Drawing.Point(160, 108);
-            this.chckBxFiltrarGenero.Name = "chckBxFiltrarGenero";
-            this.chckBxFiltrarGenero.Size = new System.Drawing.Size(105, 17);
-            this.chckBxFiltrarGenero.TabIndex = 3;
-            this.chckBxFiltrarGenero.Text = "Filtrar por genero";
-            this.chckBxFiltrarGenero.UseVisualStyleBackColor = true;
-            // 
-            // chckBxFiltrarAño
-            // 
-            this.chckBxFiltrarAño.AutoSize = true;
-            this.chckBxFiltrarAño.Location = new System.Drawing.Point(519, 108);
-            this.chckBxFiltrarAño.Name = "chckBxFiltrarAño";
-            this.chckBxFiltrarAño.Size = new System.Drawing.Size(90, 17);
-            this.chckBxFiltrarAño.TabIndex = 4;
-            this.chckBxFiltrarAño.Text = "Filtrar por año";
-            this.chckBxFiltrarAño.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(187, 189);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(344, 249);
+            this.dataGridView1.TabIndex = 10;
             // 
             // frmBuscador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.chckBxFiltrarAño);
-            this.Controls.Add(this.chckBxFiltrarGenero);
-            this.Controls.Add(this.dataGVMostrador);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtSearchBar);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtBarraBuscador);
+            this.Controls.Add(this.lblVolverMenú);
+            this.Controls.Add(this.groupBox1);
             this.Name = "frmBuscador";
-            this.Text = "Buscador";
+            this.Text = "frmBuscador";
             this.Load += new System.EventHandler(this.frmBuscador_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVMostrador)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtBarraBuscador;
+        private System.Windows.Forms.RadioButton rbAñoPelicula;
+        private System.Windows.Forms.RadioButton rbGeneroPelicula;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblVolverMenú;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGVMostrador;
-        private System.Windows.Forms.CheckBox chckBxFiltrarGenero;
-        private System.Windows.Forms.CheckBox chckBxFiltrarAño;
+        private System.Windows.Forms.TextBox txtSearchBar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -1,0 +1,14 @@
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\bin\Debug\TP Bases de Datos.exe.config
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\bin\Debug\TP Bases de Datos.exe
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\bin\Debug\TP Bases de Datos.pdb
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP Bases de Datos.csproj.AssemblyReference.cache
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP_Bases_de_Datos.Form1.resources
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP_Bases_de_Datos.frmAgregarPeliculas.resources
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP_Bases_de_Datos.frmLogin.resources
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP_Bases_de_Datos.Properties.Resources.resources
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP Bases de Datos.csproj.GenerateResource.cache
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP Bases de Datos.csproj.CoreCompileInputs.cache
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP Bases de Datos.exe
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP Bases de Datos.pdb
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP_Bases_de_Datos.frmMenu.resources
+C:\Users\ALUMNO\source\repos\TP Bases de Datos\obj\Debug\TP_Bases_de_Datos.frmBuscador.resources

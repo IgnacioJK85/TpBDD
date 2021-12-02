@@ -53,7 +53,7 @@ namespace TP_Bases_de_Datos
             }
             else
             {
-                MessageBox.Show("Las contraseñas no son iguales , Por favor, reescríbalas ", "Registro fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Las contraseñas no son iguales, reescríbalas", "Fallo en el Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtContraseña.Text = "";
                 txtConfContraseña.Text = "";
                 txtContraseña.Focus();

@@ -41,12 +41,14 @@ namespace TP_Bases_de_Datos
             this.txtGeneroPelicula = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblVolverMenú = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmbAñoPelicula
             // 
             this.cmbAñoPelicula.FormattingEnabled = true;
-            this.cmbAñoPelicula.Location = new System.Drawing.Point(495, 147);
+            this.cmbAñoPelicula.Location = new System.Drawing.Point(571, 143);
             this.cmbAñoPelicula.Name = "cmbAñoPelicula";
             this.cmbAñoPelicula.Size = new System.Drawing.Size(121, 21);
             this.cmbAñoPelicula.TabIndex = 0;
@@ -54,75 +56,86 @@ namespace TP_Bases_de_Datos
             // cmbGeneroPelicula
             // 
             this.cmbGeneroPelicula.FormattingEnabled = true;
-            this.cmbGeneroPelicula.Location = new System.Drawing.Point(495, 196);
+            this.cmbGeneroPelicula.Location = new System.Drawing.Point(571, 192);
             this.cmbGeneroPelicula.Name = "cmbGeneroPelicula";
             this.cmbGeneroPelicula.Size = new System.Drawing.Size(121, 21);
             this.cmbGeneroPelicula.TabIndex = 1;
             // 
             // txtNomPelicula
             // 
-            this.txtNomPelicula.Location = new System.Drawing.Point(495, 98);
+            this.txtNomPelicula.Location = new System.Drawing.Point(571, 94);
             this.txtNomPelicula.Name = "txtNomPelicula";
             this.txtNomPelicula.Size = new System.Drawing.Size(121, 20);
             this.txtNomPelicula.TabIndex = 2;
             // 
             // btnAgregarPelicula
             // 
-            this.btnAgregarPelicula.Location = new System.Drawing.Point(514, 251);
+            this.btnAgregarPelicula.BackColor = System.Drawing.Color.Red;
+            this.btnAgregarPelicula.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarPelicula.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAgregarPelicula.Location = new System.Drawing.Point(535, 272);
             this.btnAgregarPelicula.Name = "btnAgregarPelicula";
-            this.btnAgregarPelicula.Size = new System.Drawing.Size(81, 56);
+            this.btnAgregarPelicula.Size = new System.Drawing.Size(111, 66);
             this.btnAgregarPelicula.TabIndex = 3;
             this.btnAgregarPelicula.Text = "Agregar Pelicula";
-            this.btnAgregarPelicula.UseVisualStyleBackColor = true;
+            this.btnAgregarPelicula.UseVisualStyleBackColor = false;
             this.btnAgregarPelicula.Click += new System.EventHandler(this.btnAgregarPelicula_Click);
             // 
             // lblNomPelicula
             // 
             this.lblNomPelicula.AutoSize = true;
-            this.lblNomPelicula.Location = new System.Drawing.Point(381, 101);
+            this.lblNomPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomPelicula.Location = new System.Drawing.Point(404, 94);
             this.lblNomPelicula.Name = "lblNomPelicula";
-            this.lblNomPelicula.Size = new System.Drawing.Size(110, 13);
+            this.lblNomPelicula.Size = new System.Drawing.Size(161, 20);
             this.lblNomPelicula.TabIndex = 4;
             this.lblNomPelicula.Text = "Nombre de la Pelicula";
             // 
             // lblGeneroPelicula
             // 
             this.lblGeneroPelicula.AutoSize = true;
-            this.lblGeneroPelicula.Location = new System.Drawing.Point(381, 150);
+            this.lblGeneroPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGeneroPelicula.Location = new System.Drawing.Point(408, 141);
             this.lblGeneroPelicula.Name = "lblGeneroPelicula";
-            this.lblGeneroPelicula.Size = new System.Drawing.Size(108, 13);
+            this.lblGeneroPelicula.Size = new System.Drawing.Size(159, 20);
             this.lblGeneroPelicula.TabIndex = 5;
             this.lblGeneroPelicula.Text = "Genero de la Pelicula";
             // 
             // lblAñoPelicula
             // 
             this.lblAñoPelicula.AutoSize = true;
-            this.lblAñoPelicula.Location = new System.Drawing.Point(381, 202);
+            this.lblAñoPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAñoPelicula.Location = new System.Drawing.Point(418, 190);
             this.lblAñoPelicula.Name = "lblAñoPelicula";
-            this.lblAñoPelicula.Size = new System.Drawing.Size(95, 13);
+            this.lblAñoPelicula.Size = new System.Drawing.Size(138, 20);
             this.lblAñoPelicula.TabIndex = 6;
             this.lblAñoPelicula.Text = "Año de la Pelicula:";
             // 
             // btnAgregarALosCmb
             // 
-            this.btnAgregarALosCmb.Location = new System.Drawing.Point(191, 251);
+            this.btnAgregarALosCmb.BackColor = System.Drawing.Color.Red;
+            this.btnAgregarALosCmb.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregarALosCmb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarALosCmb.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAgregarALosCmb.Location = new System.Drawing.Point(130, 256);
             this.btnAgregarALosCmb.Name = "btnAgregarALosCmb";
-            this.btnAgregarALosCmb.Size = new System.Drawing.Size(77, 56);
+            this.btnAgregarALosCmb.Size = new System.Drawing.Size(149, 82);
             this.btnAgregarALosCmb.TabIndex = 7;
             this.btnAgregarALosCmb.Text = "Agregar información a las listas";
-            this.btnAgregarALosCmb.UseVisualStyleBackColor = true;
+            this.btnAgregarALosCmb.UseVisualStyleBackColor = false;
             this.btnAgregarALosCmb.Click += new System.EventHandler(this.btnAgregarALosCmb_Click);
             // 
             // txtAñoPelicula
             // 
-            this.txtAñoPelicula.Location = new System.Drawing.Point(179, 150);
+            this.txtAñoPelicula.Location = new System.Drawing.Point(223, 143);
             this.txtAñoPelicula.Name = "txtAñoPelicula";
             this.txtAñoPelicula.Size = new System.Drawing.Size(100, 20);
             this.txtAñoPelicula.TabIndex = 8;
             // 
             // txtGeneroPelicula
             // 
-            this.txtGeneroPelicula.Location = new System.Drawing.Point(179, 199);
+            this.txtGeneroPelicula.Location = new System.Drawing.Point(223, 190);
             this.txtGeneroPelicula.Name = "txtGeneroPelicula";
             this.txtGeneroPelicula.Size = new System.Drawing.Size(100, 20);
             this.txtGeneroPelicula.TabIndex = 9;
@@ -130,26 +143,52 @@ namespace TP_Bases_de_Datos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 153);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 13);
+            this.label1.Size = new System.Drawing.Size(201, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Genero a añadir a las listas";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 202);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 192);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.Size = new System.Drawing.Size(176, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Año a añadir a las listas";
+            // 
+            // lblVolverMenú
+            // 
+            this.lblVolverMenú.AutoSize = true;
+            this.lblVolverMenú.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVolverMenú.Location = new System.Drawing.Point(12, 9);
+            this.lblVolverMenú.Name = "lblVolverMenú";
+            this.lblVolverMenú.Size = new System.Drawing.Size(113, 20);
+            this.lblVolverMenú.TabIndex = 15;
+            this.lblVolverMenú.Text = "Volver al menú";
+            this.lblVolverMenú.Click += new System.EventHandler(this.lblVolverMenú_Click);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(70, 397);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(35, 13);
+            this.lblID.TabIndex = 16;
+            this.lblID.Text = "label3";
+            this.lblID.Visible = false;
             // 
             // frmAgregarPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.lblVolverMenú);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtGeneroPelicula);
@@ -184,5 +223,7 @@ namespace TP_Bases_de_Datos
         private System.Windows.Forms.TextBox txtGeneroPelicula;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblVolverMenú;
+        private System.Windows.Forms.Label lblID;
     }
 }
